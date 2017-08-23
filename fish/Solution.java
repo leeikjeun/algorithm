@@ -16,7 +16,7 @@ public class Solution {
         for(int i = 0; i < A.length; i++){
             if(B[i] != 0){
                 downStream.push(A[i]);
-            }else{
+            }else if (B[i] == 0){
 
                 if(downStream.isEmpty()){
                     fishes++;
@@ -41,7 +41,6 @@ public class Solution {
 
         return fishes + downStream.size();
     }
-
 
 
 }
